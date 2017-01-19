@@ -64,9 +64,11 @@ of those sections to manage the look and feel of the site. */
     background: #eee;
     font-size: large;
 }
-.contact-section {
+.cartao-section {
     height: 100%;
     padding-top: 150px;
-    text-align: center;
-    background: #eee;
+    text-align: justify;
+    background: #FFA726;
+    color: #ffffff;
+    font-size: large;
 }

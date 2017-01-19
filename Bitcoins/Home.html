@@ -6,17 +6,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Página dedicada à solucionar dúvidas sobre o Bitcoin">
+    <meta name="author" content="M1CH3L">
+    <meta name="copyright" content="© 2017 Junglebit" />
+    <meta name="keywords" content="BITCOINS, Bitcoins, Carteira, Bitcoins Brasil, Bitcoins BR, O que é Bitcoin" />
+    <meta name="generator" content="WEBSTORM" />
+    <meta name="rating" content="general" />
+    <meta name="robots" content="index" />
+    <meta http-equiv="content-language" content="pt-br" />
 
-    <link rel="icon" href="img/Bitcoin-icon.png" />
+    <link rel="icon" href="src/img/Bitcoin-icon.png" />
     <title>Junglebit | Bitcoins - Tire suas dúvidas</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="src/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="src/css/scrolling-nav.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +47,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">Bitcoins</a>
+            <a class="navbar-brand page-scroll" href="#page-top">Junglebit | Bitcoins</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,7 +64,10 @@
                     <a class="page-scroll" href="#Minerar">Como Minerar</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Cartão Bitcoin</a>
+                    <a class="page-scroll" href="#Cartao">Cartão Bitcoin</a>
+                </li>
+                <li class="hidden">
+                    <a class="page-scroll" href="#page-top"></a>
                 </li>
             </ul>
         </div>
@@ -73,7 +82,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-xs-12 col-sm-12">
-                    <img src="img/Bitcoin-icon.png" alt="Imagem com o simbolo do bitcoin" class="img-responsive">
+                    <img src="src/img/Bitcoin-icon.png" alt="Imagem com o simbolo do bitcoin" class="img-responsive">
                 </div>
                 <div class="col-md-6 col-xs-12 col-sm-12">
                     <!-- link do JSON para preço bitcoin http://api.bitvalor.com/v1/ticker.json-->
@@ -100,7 +109,7 @@
                     <p>Bitcoin é uma forma de dinheiro, assim como o real, dólar ou euro, com a diferença de ser puramente digital
                     e não ser emitido por nenhum governo. O seu valor é determinado livremente pelos indivíduos no mercado. Para transações online, é
                     a forma ideal de pagamento, pois é rápido, barato e seguro.</p>
-                    <img src="img/exchange_icon.png" alt="Icone do Bitcoin">
+                    <img src="src/img/exchange_icon.png" alt="Icone do Bitcoin">
                 </div>
                 <div class="col-md-6 col-xs-12 col-sm-12">
                     <p>Bitcoin é um software de código-fonte aberto, sustentado por uma rede de computadores distribuidas (peer-to-peer) em cada
@@ -136,7 +145,7 @@
                         alguns satoshis, mas como isso funciona? Bem, você só precisa a cada 30/10 minutos ou 1 hora clicar em um botão e
                         ver alguma propaganda, após a visualização você recebe a sua gratificação.</p>
                     <p>Clique no botão e veja nossa indicação desse serviço:</p>
-                    <button class="btn btn-info" type="button">Ver</button>
+                    <button class="btn btn-info" type="button" data-toggle="modal" data-target="#BitGratuito">Ver</button>
                 </div>
                 <div class="col-md-4 col-xs-12 col-sm-12">
                     <h1>Paga</h1>
@@ -146,7 +155,7 @@
                     <p>Mas não fique assutado! Em média, apartir de R$30 você já contrata o serviço. O legal é que você não precisa ficar clicando em
                     propagandas para ganhar satoshis.</p>
                     <p>Clique no botão e veja nossa indicação desse serviço:</p>
-                    <button class="btn btn-info" type="button">Ver</button>
+                    <button class="btn btn-info" type="button" data-toggle="modal" data-target="#BitPago">Ver</button>
                 </div>
                 <div class="col-md-4 col-xs-12 col-sm-12">
                     <h2>Minerador Dedicado</h2>
@@ -154,14 +163,14 @@
                     Porém, para você comprar uma máquina dessa, você terá que desembolsar uma alta quantia em dinheiro, outra contra-partida, o dispositivo
                     eleva o consumo de energia e da internet para realizar sua atividade.</p>
                     <p>Clique no botão e veja nossa indicação desse serviço:</p>
-                    <button class="btn btn-info" type="button">Ver</button>
+                   <a href="http://informatica.mercadolivre.com.br/minerador-bitcoin" target="_blank"><button class="btn btn-info" type="button">Ver</button></a>
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-md-12 col-xs-12 col-sm-12">
                     <p>Para todos os casos, você precisará informar sua carteira de bitcoins para receber o depósito.</p>
-                    <a class= page-scroll" href="#Carteira"><button type="button" class="btn btn-info">Veja sobre a carteira</button></a>
+                    <a class= "page-scroll" href="#Carteira"><button type="button" class="btn btn-info">Veja sobre a carteira</button></a>
                 </div>
             </div>
             <br>
@@ -186,22 +195,49 @@
                     <p>Atualmente, a maioria das empresas, possuem aplicativos para você manipular sua carteira, esses apps são fornecidos para
                     android e iOS.</p>
                     <p>Ah! Vale lembrar que não há nenhum custo para criar uma carteira, é <strong>gratuito</strong>.</p>
+                    <p>Conheça a <a href="https://www.coinbase.com/join/567c8ea095c0be60ea0000c4" target="_blank">Coinbase</a></p>
                 </div>
                 <div class="col-md-6 col-xs-12 col-sm-12">
-                    <img src="img/wallet-38244a36ce88265070d1a220e246dcc0a7e726f48b550a62bcca325ffa84e705.png" alt="Imagem de uma carteira bitcoin">
+                    <img src="src/img/wallet-38244a36ce88265070d1a220e246dcc0a7e726f48b550a62bcca325ffa84e705.png" alt="Imagem de uma carteira bitcoin">
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <p>Ta afim de usar seu bitcoins em lojas físicas ou virtuais?</p>
+                    <a class= "page-scroll" href="#Cartao"><button type="button" class="btn btn-info">Veja sobre Cartão Bitcoins</button></a>
+                </div>
+            </div>
+            <br>
         </div>
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Contact Section</h1>
+<!-- Cartão Section -->
+<section id="Cartao">
+    <div class="container-fluid cartao-section">
+        <div class="container">
+            <div class="text-center">
+                <h1>Cartões Bitcoins</h1>
+                <hr>
             </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12 col-sm-12">
+                    <p>O cartão de bitcoins serve para você desfrutar de todo o seu esforço de mineração. Eles são administrados por empresas que, geralmente,
+                    são as mesmas que fornecem a carteira. O cartão é de débito, e tem reconhecimento das bandeiras VISA ou MASTERCARD.</p>
+                    <p>Por se tratar de uma moeda virtual, o cartão de débito também pode ser virtual, mas você pode solicitar o modelo fisíco, sendo que,
+                    dependendo da companhia administradora, você pagará uma taxa pelo produto.</p>
+                    <p>Assim como a carteira, o cartão não tem anuidade e não há taxas por uso no exterior, contudo, vale lembrar novamente que isso varia de
+                        empresa-empresa.</p>
+                </div>
+                <div class="col-md-6 col-xs-12 col-sm-12">
+                    <img src="src/img/buy-bitcoin-credit-card-e1425645549553-667x500.jpg" alt="Imagem ilustrativa de uma carteira de bitcoins" class="img-responsive">
+                    <hr>
+                    <p>Conheça a
+                        <a href="http://wallet.advcash.com/referral/77c5f612-a05e-4196-9874-4781e6f09a87" target="_blank">Advcash</a> e
+                        <a href="https://xapo.com/pt/" target="_blank">Xapo</a></p>
+                </div>
+            </div>
+            <br>
         </div>
     </div>
 </section>
@@ -226,15 +262,99 @@
 
     </div>
 </div>
+
+<!--Modal Mineração Gratuita -->
+<div class="modal fade" id="BitGratuito" tabindex="-1" role="dialog" aria-labelledby="TituloGrat">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="TituloGrat">Mineração Gratuita</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 col-sm-12">
+                        <div class="thumbnail">
+                            <img src="src/img/alien-faucet-logo-300x65.jpg" alt="Logo da Alien Faucet" class="img-responsive">
+                            <div class="caption">
+                                <a href="http://www.bitcoinaliens.com/faucet?ref=nonfb-56bb39cd106b7" target="_blank"><p>Ir à Alien Faucet</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 col-sm-12">
+                        <div class="thumbnail">
+                            <img src="src/img/logo-26113caef5e7a29ad7662d4073395ed2.png" alt="Logo da Box Bit" class="img-responsive">
+                            <div class="caption">
+                                <a href="http://boxbit.co.in/?ref=1F38dFsNCYtiFFcRjDDpvQvDFnXL88u1gW" target="_blank"><p>Ir à Box Bit</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 col-sm-12">
+                        <div class="thumbnail">
+                            <img src="src/img/732eb2_1b34df8233fb44a3ab8a9ba9f0545769.jpeg_srz_300_300_85_22_0.50_1.20_0.png" alt="Logo da Free BTC" class="img-responsive">
+                            <div class="caption">
+                                <a href="http://freebitco.in/?r=1925893" target="_blank"><p>Ir à Free BTC</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 col-sm-12">
+                        <div class="thumbnail">
+                            <img src="src/img/bitmaker.png" alt="Logo da Bitmaker" class="img-responsive">
+                            <div class="caption">
+                                <p>Use o <strong>cupom: XCZHM7</strong> para começar com 2500 satoshis.</p>
+                                <a href="https://play.google.com/store/apps/details?id=com.cakecodes.bitmaker" target="_blank"><p>Ir à Free BTC</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Modal Mineração Paga-->
+<div class="modal fade" id="BitPago" tabindex="-1" role="dialog" aria-labelledby="TituloPago">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="TituloPago">Indicação</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12 col-sm-12">
+                        <div class="thumbnail">
+                            <img src="src/img/twitterpic.png" alt="Logo da Hashflarer" class="img-responsive">
+                            <div class="caption">
+                                <a href="https://hashflare.io/" target="_blank"><p>Ir à Hashflare</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- RODAPÉ -->
+<div class="container-fluid">
+    <footer>
+        <div class="container">
+            <p>&copy; 2017 Junglebit. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</div>
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="src/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="src/js/bootstrap.min.js"></script>
 
 <!-- Scrolling Nav JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/scrolling-nav.js"></script>
+<script src="src/js/jquery.easing.min.js"></script>
+<script src="src/js/scrolling-nav.js"></script>
 
 </body>
 
